@@ -1,0 +1,26 @@
+!!!
+%html{:lang => "pl"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+    %title ASI - rekrutacja 2014
+    %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
+    %link{:href => "css/style.css", :rel => "stylesheet"}
+  %body
+    .container
+      .row
+        .col-lg-6.col-lg-offset-3
+          .page-header
+            %img.text-center.img-responsive{:src => "img/asi-logo.svg", :width => "600px", :style => "padding-bottom: 20px;"}
+            %h1.text-center Rekrutacja 2014
+          %p.lead Dostaniesz od nas tylko jedną wiadomość po czym Twój adres email zostanie przez nas zapomniany chyba, że zdecydujesz się z nami zostać :)
+          - if flash[:success]
+            %p.bg-success=flash[:success]
+          %form{:role => "form", :action => "/", :method => "POST"}
+            .form-group
+              %label{:for => "email"}
+              %input.form-control{:type => "email", :id => "email", :name => "email", :placeholder => "Wpisz swój adres email."}
+            %button.btn.btn-primary.btn-lg.btn-block{:type => "submit"} Wyślij
+  %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+  %script{:src => "js/bootstrap.min.js"}
