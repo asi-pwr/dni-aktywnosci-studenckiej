@@ -10,7 +10,7 @@ end
 
 post "/" do
   @email = params[:email]
-  open("listaemaili.txt", "a") do |l| 
+  open("emails.txt", "a") do |l| 
     l << @email + "\n"
   end
   flash[:success] = "Pomyślnie dodano adres email."
