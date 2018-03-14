@@ -1,0 +1,16 @@
+---
+chdir: "/home/asiwww/fcgi/dni-aktywnosci-studenckiej"
+environment: production
+address: 0.0.0.0
+port: 3007
+timeout: 30
+log: log/thin.log
+pid: tmp/pids/thin.pid
+socket: tmp/sockets/thin.sock
+max_conns: 1024
+max_persistent_conns: 100
+require: []
+wait: 30
+threadpool_size: 20
+daemonize: true 
+tag: "dni-aktywnosci-studenckiej"
